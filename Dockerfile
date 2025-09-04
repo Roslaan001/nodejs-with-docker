@@ -4,12 +4,12 @@ RUN mkdir -p /usr/app
 
 WORKDIR /usr/app/
 
-COPY package*.json ./usr/app/
+COPY package*.json /usr/app/
 
 RUN npm install
 
-COPY ./app/ ./usr/app/
+COPY ./app/ /usr/app/
 
-EXPOSE 3000
+EXPOSE 8080
 
 CMD ["node", "app.js"]
